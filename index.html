@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Phonebook</title>
+  </head>   
+
+  <body >
+    <h1>Phonebook</h1>
+
+    <div >
+      <form>
+        Name: <input id="name" type="text" placeholder="New">
+        Phone : <input id="phone" type="text" placeholder="New">
+        <button onclick="addContact()">+</button>
+      </form>
+    </div>
+
+    <script type="text/template" class="template">	
+      <ul>
+        <% _.each( rc.contacts, function( contact ){ %>
+          <h2>
+            <%- contact.jname %>
+          </h2>
+          <p>
+            <%- contact.jphone %>
+          </p>
+          
+          <hr>
+        <% }); %>
+      </ul>
+    </script>
+    <!-- END: Underscore Template Definition. -->
+    <script src="js/underscore.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/scripts.js"></script> 
+  </body>
+
+</html>
